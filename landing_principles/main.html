@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Манифест общения в социальных сетях!</h1>
+        <p>Или просто рекомендации:</p>
+        <ul>
+            <li>Внимательно читаем <a href="https://neprivet.com/" target="_blank">neprivet</a> и делаем выводы.</li>
+            <li>Шлешь вумпуса - идешь нахуй.</li>
+            <li>Пишешь "по рофлу" - идешь нахуй.</li>
+            <li>Спрашиваешь сходу о других кто/че писал - идешь нахуй.</li>
+            <li>Полное отсутствие мысли/интереса/инициативы - идешь нахуй, ибо зачем вообще пишешь.</li>
+            <li>Реклама 18+ контента/тгк/стримов - идешь нахуй.</li>
+            <li>Псевдоинтеллектуальный нарциссизм без сути - идешь нахуй, фальшь чувствуется.</li>
+            <li>Триггеришься/споришь ради эмоций, а не поиска истины или прихода к общему решению/интересным выводам-
+                идешь нахуй.</li>
+            <li>Любишь удалять сообщения - идешь нахуй. Я тебя не знаю хорошо = не выебывайся.</li>
+            <li>Додумываешь за меня или используешь конструкции вида "то есть ты думаешь/считаешь" - идешь нахуй.</li>
+            <li>Просишь то, что сама не готова сделать - идешь нахуй.</li>
+            <li>Нет интересов за пределами шортсов/дискорда/ТТ - идешь нахуй.</li>
+            <li>Хочешь, чтобы тебя развлекали, — найди стримера, а не лезь в личку. - cоотвественно идешь нахуй.</li>
+            <li>Любишь поиграть в загадочного и молчаливого? - идешь нахуй.</li>
+        </ul>
+        <img src="src/swagga_glasses.jpg" alt="swagga">
+        <p><a href="https://t.me/society_talks" target="_blank">сасайти толкс</a> - если заябали дебилы в личке</p>
+    </div>
+
+    <script>
+        const cursor = document.createElement('div');
+        cursor.classList.add('cursor');
+        document.body.appendChild(cursor);
+
+        document.addEventListener("mousemove", (e) => {
+            // Делаем так, чтобы курсор следовал за мышью
+            cursor.style.left = e.pageX + "px";
+            cursor.style.top = e.pageY + "px";
+
+            cursor.style.opacity = "1"; // Показать кастомный курсор, когда мышь двигается
+        });
+
+        document.addEventListener("mouseleave", () => {
+            cursor.style.opacity = "0"; // Скрыть кастомный курсор при выходе мыши за пределы
+        });
+
+        // Добавляем эффект на наведение на элементы
+        const hoverableElements = document.querySelectorAll('li, a');
+        hoverableElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+            });
+
+            element.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+            });
+        });
+    </script>
+</body>
+
+</html>
