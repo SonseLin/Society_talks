@@ -71,7 +71,6 @@ img {
     opacity: 0;
     pointer-events: none;
     transition: transform 0.2s ease-out, background 0.2s ease;
-    /* Плавное движение и изменение фона */
 }
 
 .cursor-hover {

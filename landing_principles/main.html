@@ -40,18 +40,16 @@
         document.body.appendChild(cursor);
 
         document.addEventListener("mousemove", (e) => {
-            // Делаем так, чтобы курсор следовал за мышью
             cursor.style.left = e.pageX + "px";
             cursor.style.top = e.pageY + "px";
 
-            cursor.style.opacity = "1"; // Показать кастомный курсор, когда мышь двигается
+            cursor.style.opacity = "1";
         });
 
         document.addEventListener("mouseleave", () => {
-            cursor.style.opacity = "0"; // Скрыть кастомный курсор при выходе мыши за пределы
+            cursor.style.opacity = "0";
         });
 
-        // Добавляем эффект на наведение на элементы
         const hoverableElements = document.querySelectorAll('li, a');
         hoverableElements.forEach(element => {
             element.addEventListener('mouseenter', () => {
